@@ -11,3 +11,6 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install gd
 
 COPY config/php.ini /usr/local/etc/php/
+
+EXPOSE 9000
+CMD ["php-fpm"]
